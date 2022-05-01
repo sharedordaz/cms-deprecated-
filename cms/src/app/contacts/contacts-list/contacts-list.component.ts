@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts-list.component.css']
 })
 export class ContactsListComponent implements OnInit {
+  contacts: [] = 
 
   constructor() { }
 
