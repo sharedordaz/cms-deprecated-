@@ -12,8 +12,8 @@
                         <li><a href="#">Delete</a></li>
                     </ul>
                 </div> -->
-                <button type="button" class="btn btn-primary" style="margin-left:50%; margin-top:-50%;">Edit</button>
-                <button type="button" class="btn btn-danger" style="margin-top:-50%;">Delete</button>
+                <button (click)="onEdit" type="button" class="btn btn-primary" style="margin-left:50%; margin-top:-50%;">Edit</button>
+                <button (click)="onDelete"type="button" class="btn btn-danger" style="margin-top:-50%;">Delete</button>
             </div>
             <div class="panel-body">
                 <p><b>Email:</b>{{ contact.email }}</p>

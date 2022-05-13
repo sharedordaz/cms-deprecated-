@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
+import { ContactItemComponent } from './contacts/contact-item/contact-item.component';
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HeaderComponent } from './header.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { HeaderComponent } from './header.component';
     HeaderComponent,
     ContactsComponent,
     ContactsListComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    ContactItemComponent
   ],
   imports: [
     BrowserModule,
