@@ -1,9 +1,11 @@
 <div class="row">
     <div class="col-md-5">
-        <app-contacts-list></app-contacts-list>
+        <app-contacts-list
+        (selectedContactEvent)="selectedContact = $event"></app-contacts-list>
+        <p>Hello {{ selectedContact }} </p>
     </div>
     <div class="col-md-7">
-        <app-contact-detail></app-contact-detail>
+        <app-contact-detail *ngIf="selectedContact != undefined || selectedContact != null" [contact]="selectedContact"></app-contact-detail>
 
     </div>
 </div>

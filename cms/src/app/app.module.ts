@@ -17,7 +17,7 @@ import { HeaderComponent } from './header.component';
     ContactsComponent,
     ContactsListComponent,
     ContactDetailComponent,
-    ContactItemComponent
+    ContactItemComponent,
   ],
   imports: [
     BrowserModule,
