@@ -1,5 +1,19 @@
 <div class="row">
     <div class="col-xs-12">
+        <button (click)="onNewContact" class="btn btn-success">New Contact </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <app-contact-item *ngFor="let x of contacts"
+        [contact]="x">
+
+        </app-contact-item>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-xs-12">
         <button class="btn btn-success">New Contact</button>
     </div>
 </div>
@@ -11,75 +25,12 @@
         *ngFor="let contact of contacts">
             <div class="pull-left">
                 <h4 class="list-group-item-heading">{{ contact.name }}</h4>
-                <!-- <p class="list-group-item-text">{{ contact.id }}</p> -->
+                <p class="list-group-item-text">{{ contact.id }}</p>
             </div>
         <span class="pull-right">
             <img src="{{ contact.imageUrl }}" [src]="contact.imageUrl" alt="{{ contact.name }}" class="img-responsive" style="max-height: 50px;">
         </span>
         </a>
-        <!--Contact item-->
     </div>
-</div>
+</div> -->
 
-<!-- <div class="row">
-    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-        <div class="panel panel-default">
-            <div class="panel-heading c-list">
-                <span class="title">Contacts</span>
-                <ul class="pull-right c-controls">
-                    <li><a href="#cant-do-all-the-work-for-you" data-toggle="tooltip" data-placement="top" title="Add Contact"><i class="glyphicon glyphicon-plus"></i></a></li>
-                    <li><a href="#" class="hide-search" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-ellipsis-v"></i></a></li>
-                </ul>
-            </div>
-            
-            <div class="row" style="display: none;">
-                <div class="col-xs-12">
-                    <div class="input-group c-search">
-                        <input type="text" class="form-control" id="contact-list-search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
-            <ul class="list-group" id="contact-list">
-                <li class="list-group-item">
-                    <div class="pull-right">
-                        <button type="button" class="btn btn-primary">Edit</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-3">
-                        <img src="../../assets/images/barzeer.jpg" alt="Barzeer" class="img-responsive img-circle" />
-                    </div>
-                    <h3>Rex Barzee</h3>
-                    <p><b>Email:</b>barzeer@byui.edu</p>
-                    <p><b>Phone:</b>208-496-3768</p>
-                    <div class="col-xs-12 col-sm-9">
-
-                    </div>
-                    <div class="clearfix"></div>
-                </li>
-                <li class="list-group-item">
-                    <div class="pull-right">
-                        <button type="button" class="btn btn-primary">Edit</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-3">
-                        <img src="../../assets/images/jacksonk.jpg" alt="jackson" class="img-responsive img-circle" />
-                    </div>
-                    <h3>R. Kent Jackson</h3>
-                    <p><b>Email:</b>jackson@byui.edu</p>
-                    <p><b>Phone:</b>208-496-3771</p>
-                    <div class="col-xs-12 col-sm-9">
-
-                    </div>
-                    <div class="clearfix"></div>
-            </ul>
-        </div>
-    </div>
-</div>
-
- -->

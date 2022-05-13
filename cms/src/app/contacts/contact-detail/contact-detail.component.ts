@@ -18,4 +18,11 @@ export class ContactDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onEdit(){
+
+  }
+
+  onDelete(){
+    
+  }
 }
