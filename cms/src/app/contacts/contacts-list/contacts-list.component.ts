@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Output } from '@angular/core'
 import { Contact } from '../contacts.model';
 
 @Component({
@@ -12,24 +13,24 @@ export class ContactsListComponent implements OnInit {
 
   // // samplecontact: Contact = new Contact(1, "R.Kent Jackson", "jacksonk@BYU.edu",2084963771,"../../assets/images/jacksonk.jpg")
 
-  @Output() selectedContactEvent = new EventEmitter<Contact>();
+  @Output() selectedContactEvent:EventEmitter<any> = new EventEmitter<Contact>();
+  
+  @Output() dummyEmitter:EventEmitter<any> = new EventEmitter<any>();
   constructor() {
+    
    }
   ngOnInit() {
   }
   onNewContact(){ 
   }
-
-  // onSelected = (contact:Contact) => {
-  //   //#Contact receives the code
-  //   ////alert(`OnSelected: ${contact.name}`);
-  //   console.log(contact);
-  //   this.selectedContactEvent.emit(contact);
-  // }
-
+  dummyEmitt(){
+    this.dummyEmitter.emit("Dummy send")
+  }
   onSelected(contact: Contact) {
+    alert("onSelected");
     this.selectedContactEvent.emit(contact);
   }
 
 
 }
+

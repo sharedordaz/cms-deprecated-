@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-5">
         <app-contacts-list
-        (selectedContactEvent)="selectedContact=$event">
+        (dummyEmitter)="receiveEvent($event)">
         <!--TODO: Problem is not on the loop (x of contacts).  Neither is on the method onSelected receiving the parameter 'contact'. For some reason, emit always send "undefined" OR selectedContactEvent never happens -->
         </app-contacts-list>
         <!-- <p (click)="alertLog(selectedContact)">Hello</p> -->      

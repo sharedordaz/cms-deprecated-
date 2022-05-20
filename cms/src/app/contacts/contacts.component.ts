@@ -16,5 +16,11 @@ import { Contact } from './contacts.model';
   // //  alertLog(param){
   // //    alert(param);
   // //  }
+  receiveEvent(event){
+    alert("Event received")
+    // alert("Event received")
+    // this.selectedContact= event;
+    // alert(event)
+  }
  }
 
